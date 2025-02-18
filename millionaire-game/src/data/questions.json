@@ -1,0 +1,136 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the largest organ in the human body?",
+      "answers": [
+        { "text": "Skin", "correct": true },
+        { "text": "Liver", "correct": false },
+        { "text": "Brain", "correct": false },
+        { "text": "Heart", "correct": false }
+      ],
+      "value": 500
+    },
+    {
+      "id": 2,
+      "question": "Which chemical element has the symbol 'Fe'?",
+      "answers": [
+        { "text": "Fluorine", "correct": false },
+        { "text": "Iron", "correct": true },
+        { "text": "Francium", "correct": false },
+        { "text": "Fermium", "correct": false }
+      ],
+      "value": 1000
+    },
+    {
+      "id": 3,
+      "question": "In which year did World War II end?",
+      "answers": [
+        { "text": "1944", "correct": false },
+        { "text": "1946", "correct": false },
+        { "text": "1945", "correct": true },
+        { "text": "1943", "correct": false }
+      ],
+      "value": 2000
+    },
+    {
+      "id": 4,
+      "question": "What's the speed of light in miles per second (approximate)?",
+      "answers": [
+        { "text": "186,000", "correct": true },
+        { "text": "150,000", "correct": false },
+        { "text": "200,000", "correct": false },
+        { "text": "175,000", "correct": false }
+      ],
+      "value": 4000
+    },
+    {
+      "id": 5,
+      "question": "How many bones are in the adult human body?",
+      "answers": [
+        { "text": "186", "correct": false },
+        { "text": "206", "correct": true },
+        { "text": "216", "correct": false },
+        { "text": "196", "correct": false }
+      ],
+      "value": 8000
+    },
+    {
+      "id": 6,
+      "question": "Which planet has the most moons in our solar system?",
+      "answers": [
+        { "text": "Saturn", "correct": false },
+        { "text": "Jupiter", "correct": true },
+        { "text": "Uranus", "correct": false },
+        { "text": "Neptune", "correct": false }
+      ],
+      "value": 16000
+    },
+    {
+      "id": 7,
+      "question": "What percentage of Earth's surface is covered by water?",
+      "answers": [
+        { "text": "61%", "correct": false },
+        { "text": "71%", "correct": true },
+        { "text": "81%", "correct": false },
+        { "text": "51%", "correct": false }
+      ],
+      "value": 32000
+    },
+    {
+      "id": 8,
+      "question": "In what year was the first email sent?",
+      "answers": [
+        { "text": "1969", "correct": false },
+        { "text": "1971", "correct": true },
+        { "text": "1973", "correct": false },
+        { "text": "1975", "correct": false }
+      ],
+      "value": 64000
+    },
+    {
+      "id": 9,
+      "question": "What's the atomic number of gold?",
+      "answers": [
+        { "text": "79", "correct": true },
+        { "text": "77", "correct": false },
+        { "text": "81", "correct": false },
+        { "text": "75", "correct": false }
+      ],
+      "value": 125000
+    },
+    {
+      "id": 10,
+      "question": "How many time zones are there in Russia?",
+      "answers": [
+        { "text": "9", "correct": false },
+        { "text": "11", "correct": true },
+        { "text": "7", "correct": false },
+        { "text": "13", "correct": false }
+      ],
+      "value": 250000
+    },
+    {
+      "id": 11,
+      "question": "What's the square root of 1,000,000?",
+      "answers": [
+        { "text": "1,000", "correct": true },
+        { "text": "10,000", "correct": false },
+        { "text": "100", "correct": false },
+        { "text": "500", "correct": false }
+      ],
+      "value": 500000
+    },
+    {
+      "id": 12,
+      "question": "How many dimples does an average golf ball have?",
+      "answers": [
+        { "text": "512", "correct": false },
+        { "text": "436", "correct": false },
+        { "text": "954", "correct": false },
+        { "text": "336", "correct": true }
+      ],
+      "value": 1000000
+    }
+  ]
+}
