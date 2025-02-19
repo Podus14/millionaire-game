@@ -6,7 +6,8 @@ import PrizeComponent from "@/app/components/prize-pool";
 import { Question } from "@/app/types/question";
 import { useMediaQuery } from "react-responsive";
 import BurgerMenuComponent from "@/app/components/burger-menu";
-import CurrentQuestionComponent from "../components/current-question";
+import CurrentQuestionComponent from "@/app/components/current-question";
+import CurrentAnswersComponent from "@/app/components/current-answers";
 
 type Props = {
   questions: Question[];
@@ -52,24 +53,12 @@ export default function Page({ questions, checkAnswer }: Props) {
 
       <div className="md:flex md:flex-col w-full md:pl-[5.5%] md:pr-[10%] md:justify-between md:mt-[133px] md:mb-[122px]">
         <CurrentQuestionComponent currentQuestion={currentQuestion.question} />
-        <div className="grid grid-col lg:grid-cols-2 gap-[8px] md:gap-y-[32px] md:gap-x-0 w-full">
-          {currentQuestion.answers.map((answer, index) => (
-            <div key={answer.text} className="flex items-center ">
-              <hr className="w-[17px] bg-[#D0D0D8] flex-shrink-0" />
-              <button
-                type="submit"
-                onClick={() => handleAnswer(currentQuestion.id, answer.text)}
-                className="w-full bg-white text-[#1C1C21] text-left text-sm md:text-xl font-normal border border-[#D0D0D8] rounded-xl py-[19px] md:py-[24.5px] px-[23px] md:pl-[32px] md:pr-[49px] leading-[16px]"
-              >
-                <span className="font-semibold text-[#FF8B37] leading-[16px] mr-[8px]">
-                  {letters[index]}
-                </span>
-                <span className="leading-[16px]">{answer.text}</span>
-              </button>
-              <hr className="w-[17px] bg-[#D0D0D8] flex-shrink-0" />
-            </div>
-          ))}
-        </div>
+        <CurrentAnswersComponent
+          currentQuestion={currentQuestion}
+          letters={letters}
+          handleAnswer={handleAnswer}
+          checkAnswer={checkAnswer}
+        />
       </div>
       {!isMobile ? (
         <div className="flex bg-white h-full items-center md:w-[376px] flex-shrink-0">

@@ -1,4 +1,4 @@
-import questions from "../../data/questions.json";
+import questions from "@/data/questions.json";
 import PageClient from "./game.client";
 export default function Page() {
   const questionsWithoutAnswers = questions.questions.map((question) => {
