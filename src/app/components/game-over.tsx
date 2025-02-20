@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 type Props = {
   onTryAgain: () => void;
   totalScore: number;
 };
 export default function GameOver({ onTryAgain, totalScore }: Props) {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useIsMobile();
 
   return (
     <div className="flex justify-center items-center h-screen bg-white">
