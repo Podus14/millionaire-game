@@ -22,7 +22,7 @@ export default function GameOver({ onTryAgain, totalScore }: Props) {
             className="w-full h-auto"
           />
         </div>
-        <div className="w-full text-center md:text-left text-[#1C1C21] ">
+        <div className="w-full text-center md:text-left text-dark ">
           <h2 className="opacity-50 text-lg md:text-[32px] mb-[8px] font-semibold leading-[21px] md:leading-[37px]">
             Total score:
           </h2>
@@ -30,7 +30,7 @@ export default function GameOver({ onTryAgain, totalScore }: Props) {
             ${totalScore.toLocaleString("en-US")} earned
           </h1>
           <button
-            className="inline-block bg-[#FF8B37] font-semibold rounded-lg md:rounded-xl text-white text-center text-sm md:text-xl w-[288px] md:w-[296px] px-[24px] py-[16px] md:py-[21px] leading-[16px] md:leading-[23px] hover:bg-[#FFAC70] active:bg-[#E87928]"
+            className="inline-block bg-accentOrange font-semibold rounded-lg md:rounded-xl text-white text-center text-sm md:text-xl w-[288px] md:w-[296px] px-[24px] py-[16px] md:py-[21px] leading-[16px] md:leading-[23px] hover:bg-hoverOrange active:bg-pressedOrange"
             onClick={onTryAgain}
           >
             Try again

@@ -4,10 +4,10 @@ import GameOver from "@/app/components/game-over";
 import { useState } from "react";
 import PrizeComponent from "@/app/components/prize-pool";
 import { Question } from "@/app/types/question";
-import { useMediaQuery } from "react-responsive";
 import BurgerMenuComponent from "@/app/components/burger-menu";
 import CurrentQuestionComponent from "@/app/components/current-question";
 import CurrentAnswersComponent from "@/app/components/current-answers";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 type Props = {
   questions: Question[];
@@ -17,8 +17,7 @@ type Props = {
 export default function Page({ questions, checkAnswer }: Props) {
   const [questionNumber, setQuestionNumber] = useState<number>(1);
   const [score, setScore] = useState<number>(0);
-
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useIsMobile();
   const letters = ["A", "B", "C", "D"];
   const currentQuestion = questions[questionNumber - 1];
 
@@ -48,7 +47,7 @@ export default function Page({ questions, checkAnswer }: Props) {
     );
   }
   return (
-    <div className="relative w-full flex flex-col md:flex-row bg-[#F5F5F7] h-screen md:justify-between">
+    <div className="relative w-full flex flex-col md:flex-row bg-grayBg h-screen md:justify-between">
       <BurgerMenuComponent questions={questions} score={score} />
 
       <div className="md:flex md:flex-col w-full md:pl-[5.5%] md:pr-[10%] md:justify-between md:mt-[133px] md:mb-[122px]">

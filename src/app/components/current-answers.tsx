@@ -43,28 +43,28 @@ export default function CurrentAnswersComponent({
         const isHovered = !selectedAnswer && hoveredAnswer === answer.text;
 
         let bgColor = "bg-white";
-        let borderHrColor = "border-[#D0D0D8]";
-        let borderColor = "border-[#D0D0D8]";
+        let borderHrColor = "border-gray1";
+        let borderColor = "border-gray1";
 
         if (isSelected) {
           if (answerStatus === "pending") {
-            bgColor = "bg-[#FFF3EB]";
-            borderHrColor = "border-[#FF8B37]";
-            borderColor = "border-[#FF8B37]";
+            bgColor = "bg-pendingBg";
+            borderHrColor = "border-accentOrange";
+            borderColor = "border-accentOrange";
           } else if (answerStatus === "correct") {
-            bgColor = "bg-[#E6FAEA]";
-            borderHrColor = "border-[#47D867]";
-            borderColor = "border-[#47D867]";
+            bgColor = "bg-successBg";
+            borderHrColor = "border-success";
+            borderColor = "border-success";
           } else if (answerStatus === "wrong") {
-            bgColor = "bg-[#FDEEED]";
-            borderHrColor = "border-[#EC6259]";
-            borderColor = "border-[#EC6259]";
+            bgColor = "bg-wrongBg";
+            borderHrColor = "border-wrong";
+            borderColor = "border-wrong";
           }
         }
 
         if (isHovered) {
-          borderHrColor = "border-[#FF8B37]";
-          borderColor = "border-[#FF8B37]";
+          borderHrColor = "border-accentOrange";
+          borderColor = "border-accentOrange";
         }
 
         return (
@@ -77,11 +77,11 @@ export default function CurrentAnswersComponent({
               onClick={() => handleClick(answer.text)}
               onMouseEnter={() => setHoveredAnswer(answer.text)}
               onMouseLeave={() => setHoveredAnswer(null)}
-              className={`w-full text-[#1C1C21] text-left text-sm md:text-xl font-normal rounded-xl py-[19px] md:py-[24.5px] px-[23px] md:pl-[32px] md:pr-[49px] leading-[16px] transition-colors border 
+              className={`w-full text-dark text-left text-sm md:text-xl font-normal rounded-xl py-[19px] md:py-[24.5px] px-[23px] md:pl-[32px] md:pr-[49px] leading-[16px] transition-colors border 
                   ${bgColor} ${borderColor}`}
               disabled={!!selectedAnswer}
             >
-              <span className="font-semibold text-[#FF8B37] leading-[16px] mr-[8px]">
+              <span className="font-semibold text-accentOrange leading-[16px] mr-[8px]">
                 {letters[index]}
               </span>
               <span className="leading-[16px]">{answer.text}</span>
